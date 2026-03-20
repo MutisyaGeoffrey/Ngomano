@@ -1,13 +1,16 @@
-import { Phone, MessageCircle, Mail } from "lucide-react";
+import { Phone, MessageCircle, Mail, CalendarCheck } from "lucide-react";
 import pharmacyImg from "@/assets/pharmacy-service.jpg";
 import clinicImg from "@/assets/clinic-service.jpg";
 import labImg from "@/assets/lab-service.jpg";
 import agrovetImg from "@/assets/agrovet-service.jpg";
+import BookingModal from "./BookingModal";
+import { Button } from "@/components/ui/button";
 
 const departments = [
   {
     tag: "Professional Dispensing",
     title: "Ngomano Pharmacy",
+    modalServiceValue: "Pharmacy / Dispensing",
     image: pharmacyImg,
     items: ["Drug Dispensing", "Medicine Packs"],
     phone: "+254112787020",
@@ -19,6 +22,7 @@ const departments = [
   {
     tag: "OPD & Consultations",
     title: "Ngomannex Healthcare",
+    modalServiceValue: "OPD / Clinical Consultation",
     image: clinicImg,
     items: [
       "OPD Consultation Services",
@@ -38,6 +42,7 @@ const departments = [
   {
     tag: "Diagnostic Services",
     title: "Ngomano Laboratory",
+    modalServiceValue: "Laboratory Diagnostic",
     image: labImg,
     items: [
       "Blood Sugar (RBS / FBS)",
@@ -59,6 +64,7 @@ const departments = [
   {
     tag: "Farming & Livestock",
     title: "Ngomano Agrovet",
+    modalServiceValue: "Agrovet / Farming Advisory",
     image: agrovetImg,
     items: [
       "Agrochemical Dispensing",
@@ -130,13 +136,13 @@ const ServicesSection = () => {
                 </ul>
 
                 <div className="flex flex-col gap-3 pt-6 border-t border-border/50">
-                  <a
-                    href={`tel:${dept.phone}`}
-                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-body font-bold bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg transition-all"
-                  >
-                    <Phone className="w-4 h-4" /> {dept.phoneDisplay}
-                  </a>
-                  <div className="grid grid-cols-2 gap-3">
+                  <BookingModal defaultService={dept.modalServiceValue}>
+                    <Button className="w-full bg-primary text-primary-foreground font-bold hover:bg-primary/90 hover:scale-[1.02] shadow-sm transition-transform h-12 rounded-xl text-base">
+                      <CalendarCheck className="w-5 h-5 mr-2" /> Book Service
+                    </Button>
+                  </BookingModal>
+                  
+                  <div className="grid grid-cols-2 gap-3 mt-2">
                     <a
                       href={`https://wa.me/${dept.whatsapp}`}
                       target="_blank"

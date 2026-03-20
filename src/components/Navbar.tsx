@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, MessageCircle, Mail, MapPin, Menu, X } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Menu, X, CalendarCheck } from "lucide-react";
+import BookingModal from "./BookingModal";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -45,18 +47,26 @@ const Navbar = () => {
           <span className="text-xs font-body font-semibold text-primary tracking-widest uppercase">We Value Health To All</span>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="px-4 py-2 text-sm font-body font-medium text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-teal-light"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        {/* Desktop nav & CTA */}
+        <div className="hidden lg:flex items-center gap-6">
+          <nav className="flex items-center gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="px-4 py-2 text-sm font-body font-medium text-muted-foreground hover:text-primary transition-colors rounded-md hover:bg-teal-light"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <BookingModal>
+            <Button className="font-bold shadow-md hover:scale-105 transition-transform bg-secondary text-secondary-foreground hover:bg-white hover:text-primary">
+              <CalendarCheck className="w-4 h-4 mr-2" />
+              Book Appointment
+            </Button>
+          </BookingModal>
+        </div>
 
         {/* Mobile menu button */}
         <button
@@ -88,13 +98,20 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border mt-2">
-                <a href="tel:+254112787020" className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Phone className="w-4 h-4 text-primary" /> 0112 787 020
-                </a>
-                <a href="https://wa.me/254112787020" className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <MessageCircle className="w-4 h-4 text-primary" /> WhatsApp
-                </a>
+              <div className="flex flex-col gap-3 pt-4 border-t border-border mt-2">
+                <BookingModal>
+                  <Button className="w-full font-bold text-md h-12 bg-secondary text-secondary-foreground">
+                    <CalendarCheck className="w-4 h-4 mr-2" /> Book Appointment
+                  </Button>
+                </BookingModal>
+                <div className="flex flex-col gap-2 pt-2">
+                  <a href="tel:+254112787020" className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Phone className="w-4 h-4 text-primary" /> 0112 787 020
+                  </a>
+                  <a href="https://wa.me/254112787020" className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <MessageCircle className="w-4 h-4 text-primary" /> WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </motion.nav>
