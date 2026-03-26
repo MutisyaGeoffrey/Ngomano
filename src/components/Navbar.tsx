@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Laboratory", href: "#laboratory" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -33,7 +32,7 @@ const Navbar = () => {
             <a href="mailto:ngomanochemist@gmail.com" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
               <Mail className="w-3.5 h-3.5" /> Email us
             </a>
-            <a href="https://maps.google.com/?q=Wote,Makueni,Kenya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
+            <a href="https://maps.app.goo.gl/qqvz3XBc8SSUx5yQ6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
               <MapPin className="w-3.5 h-3.5" /> Find us
             </a>
           </div>

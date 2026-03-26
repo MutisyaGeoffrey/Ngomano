@@ -83,27 +83,44 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Location */}
+          {/* Location & Map Integration */}
           <div
             data-aos="zoom-in-up"
             data-aos-delay="400"
-            className="group bg-white/80 backdrop-blur-md rounded-2xl border border-border/50 p-8 text-center hover:shadow-2xl hover:scale-[1.03] transition-all duration-500"
+            className="group bg-white/80 backdrop-blur-md rounded-2xl border border-border/50 overflow-hidden hover:shadow-2xl transition-all duration-500 lg:col-span-1 md:col-span-2 flex flex-col"
           >
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
-              <MapPin className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-500" />
+            <div className="p-8 text-center flex-grow">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                <MapPin className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-500" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">Location</h3>
+              <p className="font-body text-lg text-muted-foreground mb-6 leading-relaxed">
+                Wote Town<br />Makueni County,<br />Kenya
+              </p>
+              <a
+                href="https://maps.app.goo.gl/qqvz3XBc8SSUx5yQ6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-bold rounded-xl hover:bg-primary/90 hover:scale-[1.05] hover:shadow-lg transition-all w-full"
+              >
+                Get Directions <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
-            <h3 className="font-display text-2xl font-bold text-foreground mb-4">Location</h3>
-            <p className="font-body text-lg text-muted-foreground mb-6 leading-relaxed">
-              Wote Town<br />Makueni County,<br />Kenya
-            </p>
-            <a
-              href="https://maps.google.com/?q=Wote,Makueni,Kenya"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-body font-bold rounded-xl hover:bg-primary/90 hover:scale-[1.05] hover:shadow-lg transition-all w-full"
-            >
-              Get Directions <ExternalLink className="w-4 h-4" />
-            </a>
+            
+            {/* Live Map iframe directly integrated */}
+            <div className="w-full h-48 sm:h-56 mt-auto">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.744165689037!2d37.6256956!3d-1.782012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18260d0061eacedd%3A0xe16cde34336f06a0!2sNgomano%20Care%20Hub!5e0!3m2!1sen!2ske!4v1710000000000!5m2!1sen!2ske"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ngomano Care Hub Live Map"
+                className="border-t border-border/50"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
