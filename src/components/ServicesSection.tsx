@@ -16,7 +16,7 @@ const departments = [
     phone: "+254112787020",
     phoneDisplay: "0112 787 020",
     whatsapp: "254112787020",
-    email: "ngomanoannex@gmail.com",
+    email: "ngomanochemist@gmail.com",
     delay: 100
   },
   {
@@ -58,7 +58,7 @@ const departments = [
     phone: "+254732664399",
     phoneDisplay: "0732 664 399",
     whatsapp: "254732664399",
-    email: "ngomanoannex@gmail.com",
+    email: "ngomanochemist@gmail.com",
     delay: 300
   },
   {
@@ -75,7 +75,7 @@ const departments = [
     phone: "+254723583740",
     phoneDisplay: "0723 583 740",
     whatsapp: "254723583740",
-    email: "ngomanoannex@gmail.com",
+    email: "ngomanoagrovet@gmail.com",
     delay: 400
   },
 ];

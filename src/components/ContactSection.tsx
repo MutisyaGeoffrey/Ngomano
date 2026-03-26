@@ -76,6 +76,14 @@ const ContactSection = () => {
               <a href="mailto:ngomanoannex@gmail.com" className="block text-muted-foreground hover:text-primary font-medium transition-colors break-all p-2 rounded-lg hover:bg-primary/5">
                 ngomanoannex<br/>@gmail.com
               </a>
+              <div className="w-12 h-px bg-border mx-auto my-3" />
+              <a href="mailto:ngomanochemist@gmail.com" className="block text-muted-foreground hover:text-primary font-medium transition-colors break-all p-2 rounded-lg hover:bg-primary/5">
+                ngomanochemist<br/>@gmail.com
+              </a>
+              <div className="w-12 h-px bg-border mx-auto my-3" />
+              <a href="mailto:ngomanoagrovet@gmail.com" className="block text-muted-foreground hover:text-primary font-medium transition-colors break-all p-2 rounded-lg hover:bg-primary/5">
+                ngomanoagrovet<br/>@gmail.com
+              </a>
             </div>
           </div>
 
