@@ -75,7 +75,7 @@ const departments = [
     phone: "+254723583740",
     phoneDisplay: "0723 583 740",
     whatsapp: "254723583740",
-    email: "ngomanoagrovet@gmail.com",
+    email: "ngomanoannex@gmail.com",
     delay: 400
   },
 ];
