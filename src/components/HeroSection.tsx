@@ -8,9 +8,31 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Ngomano pharmacy professional" className="w-full h-full object-cover object-center scale-105" loading="lazy" />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
+        <img
+          src={heroImg}
+          alt="Ngomano pharmacy professional"
+          className="w-full h-full object-cover object-center scale-[1.1]"
+          style={{ filter: "saturate(1.18) contrast(1.06) brightness(0.94)" }}
+          loading="lazy"
+        />
+
+        {/* Darken image a bit so content stays readable */}
+        <div className="absolute inset-0 bg-black/35 backdrop-blur-[2px]" />
+        {/* Brand gradient wash */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/35 to-transparent" />
+        {/* Extra warmth + texture */}
+        <div className="absolute inset-0 bg-warm-pattern opacity-20" />
+
+        {/* Lively animated overlays (subtle, performance-friendly) */}
+        <div className="absolute inset-0 animate-hero-shimmer opacity-70" />
+        <div
+          className="absolute -top-48 left-[-12%] w-[680px] h-[680px] rounded-full bg-secondary/25 blur-3xl animate-hero-float"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-56 right-[-15%] w-[820px] h-[820px] rounded-full bg-primary/20 blur-3xl animate-hero-float-2"
+          aria-hidden="true"
+        />
       </div>
 
       {/* Content */}

@@ -118,6 +118,27 @@
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
+
+  /* Hero background motion (kept subtle for readability/perf) */
+  .animate-hero-float {
+    animation: heroFloat 10s ease-in-out infinite;
+  }
+
+  .animate-hero-float-2 {
+    animation: heroFloat2 12s ease-in-out infinite;
+  }
+
+  .animate-hero-shimmer {
+    background-image: linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 70%
+    );
+    background-size: 200% 200%;
+    animation: heroShimmer 8s ease-in-out infinite;
+    mix-blend-mode: screen;
+  }
 }
 
 @keyframes fadeUp {
@@ -128,5 +149,46 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(18px, -14px, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes heroFloat2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-16px, 16px, 0) scale(1.035);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes heroShimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-float,
+  .animate-hero-float-2,
+  .animate-hero-shimmer {
+    animation: none !important;
   }
 }
