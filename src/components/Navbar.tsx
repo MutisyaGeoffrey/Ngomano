@@ -29,7 +29,7 @@ const Navbar = () => {
             <a href="https://wa.me/254112787020" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
               <MessageCircle className="w-3.5 h-3.5" /> WhatsApp
             </a>
-            <a href="mailto:ngomanochemist@gmail.com" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
+            <a href="mailto:ngomanoannex@gmail.com" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
               <Mail className="w-3.5 h-3.5" /> Email us
             </a>
             <a href="https://maps.app.goo.gl/qqvz3XBc8SSUx5yQ6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:opacity-80 transition-opacity">
