@@ -36,7 +36,7 @@ const departments = [
     phone: "+254732664399",
     phoneDisplay: "0732 664 399",
     whatsapp: "254732664399",
-    email: "ngomanoannex@gmail.com",
+    email: "ngomannaxex@gmail.com",
     delay: 200
   },
   {

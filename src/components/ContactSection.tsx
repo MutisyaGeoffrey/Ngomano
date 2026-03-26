@@ -73,8 +73,8 @@ const ContactSection = () => {
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-4">Email</h3>
             <div className="space-y-4 font-body">
-              <a href="mailto:ngomanoannex@gmail.com" className="block text-muted-foreground hover:text-primary font-medium transition-colors break-all p-2 rounded-lg hover:bg-primary/5">
-                ngomanoannex<br/>@gmail.com
+              <a href="mailto:ngomannaxex@gmail.com" className="block text-muted-foreground hover:text-primary font-medium transition-colors break-all p-2 rounded-lg hover:bg-primary/5">
+                ngomannaxex<br/>@gmail.com
               </a>
               <div className="w-12 h-px bg-border mx-auto my-3" />
               <a href="mailto:ngomanochemist@gmail.com" className="block text-muted-foreground hover:text-primary font-medium transition-colors break-all p-2 rounded-lg hover:bg-primary/5">
