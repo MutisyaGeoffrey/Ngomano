@@ -11,7 +11,7 @@ const HeroSection = () => {
         <img
           src={heroImg}
           alt="Ngomano pharmacy professional"
-          className="w-full h-full object-cover object-center scale-[1.1]"
+          className="w-full h-full object-cover scale-[1.06] sm:scale-[1.08] md:scale-[1.1] lg:scale-[1.04] xl:scale-100 object-[50%_35%] sm:object-[50%_35%] md:object-[50%_30%] lg:object-[50%_22%] xl:object-[50%_20%]"
           style={{ filter: "saturate(1.18) contrast(1.06) brightness(0.94)" }}
           loading="lazy"
         />
