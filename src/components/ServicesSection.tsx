@@ -36,7 +36,7 @@ const departments = [
     phone: "+254732664399",
     phoneDisplay: "0732 664 399",
     whatsapp: "254732664399",
-    email: "ngomannaxex@gmail.com",
+    email: "ngomannex@gmail.com",
     delay: 200
   },
   {
@@ -141,7 +141,7 @@ const ServicesSection = () => {
                       <CalendarCheck className="w-5 h-5 mr-2" /> Book Service
                     </Button>
                   </BookingModal>
-                  
+
                   <div className="grid grid-cols-2 gap-3 mt-2">
                     <a
                       href={`https://wa.me/${dept.whatsapp}`}
@@ -164,7 +164,7 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-      
+
       {/* Decorative background element */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
     </section>
